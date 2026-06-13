@@ -87,7 +87,7 @@
         </div>
     </section>
 
-<section id="experience" class="experience scroll-animate">
+<section id="experience" class="experience scroll-animate show">
 
     <p class="section_text_p1">Explore My</p>
     <h2 class="section-title">Experience</h2>
@@ -215,7 +215,7 @@
     </section>
 
 
-    <section class="contact" id="contact scroll-animate">
+    <section id="contact" class="contact scroll-animate show">
         <div class="input-box">
 
             <h2 class="section-title">Contact Me</h2>

@@ -240,7 +240,6 @@ section {
     font-size: 2rem;
 }
 
-
 .btn-group{
     display: flex;
     justify-content: space-between;
@@ -250,6 +249,7 @@ section {
 
 
 .btn {
+    display: inline-block;
     border-radius: 2rem;
     padding: 0.2rem 1.5rem;
     border: 2px solid black !important;
@@ -265,18 +265,18 @@ section {
     transform: scale(1.05);
 }
 
-.btn-darkmode {
-    background: transparent;
-    border-radius: 50%;
-    padding: 0.6rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+    .btn-darkmode {
+        background: transparent;
+        border-radius: 50%;
+        padding: 0.6rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-.btn-darkmode:hover {
-    color: #009dff;
-    transform: scale(1.05);
-}
+    .btn-darkmode:hover {
+        color: #009dff;
+        transform: scale(1.05);
+    }
 
 .socials {
     font-size: 2.5rem;
