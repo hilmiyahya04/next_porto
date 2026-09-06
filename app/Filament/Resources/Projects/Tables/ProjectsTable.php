@@ -4,10 +4,12 @@ namespace App\Filament\Resources\Projects\Tables;
 
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\DeleteAction;
 use Filament\Actions\EditAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\Action;
 use Filament\Tables\Table;
 
 class ProjectsTable
@@ -25,8 +27,6 @@ class ProjectsTable
                     ->searchable(),
                 TextColumn::make('github_url')
                     ->searchable(),
-                IconColumn::make('is_featured')
-                    ->boolean(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
@@ -39,6 +39,7 @@ class ProjectsTable
             ->filters([
                 //
             ])
+            ->actionsColumnLabel('Aksi')
             ->recordActions([
                 EditAction::make()
                     ->label('')
@@ -47,6 +48,13 @@ class ProjectsTable
                     ->modalHeading('Edit Project')
                     ->modalSubmitActionLabel('Simpan')
                     ->successNotificationTitle('Berhasil diupdate'),
+                DeleteAction::make()
+                    ->label('')
+                    ->icon('heroicon-o-trash')
+                    ->color('danger')
+                    ->modalHeading('Delete Project')
+                    ->modalSubmitActionLabel('Hapus')
+                    ->successNotificationTitle('Berhasil dihapus'),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

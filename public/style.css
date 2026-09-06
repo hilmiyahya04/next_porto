@@ -1,11 +1,22 @@
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    /* Font bawaan untuk seluruh elemen website */
+    font-family: 'Plus Jakarta Sans', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+}
+
+/* Kustomisasi khusus untuk Judul Utama / Nama agar menggunakan Space Grotesk */
+h1,
+.hero-title,
+.brand-name {
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 /*header*/
@@ -33,7 +44,9 @@ body.dark-mode {
     color: #ffffff;
 }
 
-.dark-mode .header, .dark-mode .nav-links, .dark-mode .btn {
+.dark-mode .header,
+.dark-mode .nav-links,
+.dark-mode .btn {
     background-color: #333;
     color: white;
 }
@@ -203,8 +216,10 @@ section {
 
 .about img {
     width: min(30vw, 400px);
-    aspect-ratio: 1 / 1;      /* paksa jadi kotak */
-    object-fit: cover;        /* biar gambar tidak gepeng */
+    aspect-ratio: 1 / 1;
+    /* paksa jadi kotak */
+    object-fit: cover;
+    /* biar gambar tidak gepeng */
     border-radius: 50%;
     transition: 0.3s ease;
 }
@@ -240,7 +255,7 @@ section {
     font-size: 2rem;
 }
 
-.btn-group{
+.btn-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -265,18 +280,18 @@ section {
     transform: scale(1.05);
 }
 
-    .btn-darkmode {
-        background: transparent;
-        border-radius: 50%;
-        padding: 0.6rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
+.btn-darkmode {
+    background: transparent;
+    border-radius: 50%;
+    padding: 0.6rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-    .btn-darkmode:hover {
-        color: #009dff;
-        transform: scale(1.05);
-    }
+.btn-darkmode:hover {
+    color: #009dff;
+    transform: scale(1.05);
+}
 
 .socials {
     font-size: 2.5rem;
@@ -323,7 +338,7 @@ body.dark-mode .socials a {
     object-fit: cover;
 }
 
-.experience img:hover{
+.experience img:hover {
     transform: scale(1.05);
 }
 
@@ -399,20 +414,20 @@ body.dark-mode .experience-card {
 }
 
 .skill {
-     margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
-.skill-row{
+.skill-row {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.skill-name{
+.skill-name {
     width: 80px;
 }
 
-.skil-percent{
+.skil-percent {
     width: 40px;
     text-align: right;
 }
@@ -425,7 +440,8 @@ body.dark-mode .experience-card {
 .progress {
     flex: 1;
     height: 20px;
-    background: linear-gradient(to right, #009dff, #ff00ff); /* pindah ke sini */
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    /* pindah ke sini */
     border-radius: 10px;
     overflow: hidden;
 }
@@ -563,6 +579,7 @@ body.dark-mode .project-card {
     gap: 2rem;
     margin-top: 5rem;
 }
+
 .input-box input {
     border-radius: 3rem;
     border: 2px solid black;
@@ -621,6 +638,7 @@ footer ul li a {
     font-size: 300;
     margin-top: 2rem;
 }
+
 /* ================== 1280px ================== */
 @media (max-width:1280px) {
     header {
@@ -712,19 +730,19 @@ footer ul li a {
     }
 
     .nav-links {
-            position: absolute;
-            top: 100%;
-            margin-top: 1rem;
-            width: 100%;
-            transform: translateX(-10%);
-            padding: 1rem;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            background: rgb(0, 0, 0, 0.9);
-            border-radius: 3rem;
-            display: none;
+        position: absolute;
+        top: 100%;
+        margin-top: 1rem;
+        width: 100%;
+        transform: translateX(-10%);
+        padding: 1rem;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(0, 0, 0, 0.9);
+        border-radius: 3rem;
+        display: none;
     }
 
     .nav-links.active {
