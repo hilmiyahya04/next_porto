@@ -112,7 +112,7 @@
     </div>
 </section>
 
-    <section id="skills scroll-animate">
+    <section id="skills" class="scroll-animate">
         <p class="section_text_p1">Explore My</p>
         <h1 class="title">Skills</h1>
 
