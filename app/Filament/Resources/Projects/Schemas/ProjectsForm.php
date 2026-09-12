@@ -5,7 +5,6 @@ namespace App\Filament\Resources\Projects\Schemas;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
 class ProjectsForm
@@ -29,8 +28,6 @@ class ProjectsForm
                     ->url(),
                 TextInput::make('github_url')
                     ->url(),
-                Toggle::make('is_featured')
-                    ->required(),
             ]);
     }
 }

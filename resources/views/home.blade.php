@@ -80,7 +80,7 @@
                 <div class="socials">
                     <a class="fa-brands fa-facebook" href="https://www.facebook.com/share/152k5LGDE7/"></a>
                     <a class="fa-brands fa-instagram" href="https://www.instagram.com/hyahyaaa01?igsh=Znkzb21jeGJvaDk3"></a>
-                    <a class="fa-brands fa-github" href="https://github.com/hilmiyahya04"></a>
+                    <a class="fa-brands fa-github" href="https://github.com/hyahyaaa01"></a>
                 </div>
 
             </div>
@@ -190,27 +190,26 @@
         <h2 class="section-title">Recent Projects</h2>
 
         <div class="projects-grid">
-    @foreach($projects as $project)
-        <div class="project-card">
+        @foreach($projects as $project)
+            <div class="project-card">
 
-            <img src="{{ asset('storage/' . $project->image) }}" alt="">
+                <img src="{{ asset('storage/' . (str_starts_with($project->image, 'projects/') ? $project->image : 'projects/' . $project->image)) }}" alt="{{ $project->title }}">
+                <h3>{{ $project->title }}</h3>
 
-            <h3>{{ $project->title }}</h3>
+                <p>{{ $project->description }}</p>
 
-            <p>{{ $project->description }}</p>
+                <div class="btn-group">
+                    <a href="{{ $project->demo_url }}" class="btn" target="_blank">
+                        Live Demo
+                    </a>
 
-            <div class="btn-group">
-                <a href="{{ $project->demo_url }}" class="btn" target="_blank">
-                    Live Demo
-                </a>
+                    <a href="{{ $project->github_url }}" class="btn" target="_blank">
+                        Github Repo
+                    </a>
+                </div>
 
-                <a href="{{ $project->github_url }}" class="btn" target="_blank">
-                    Github Repo
-                </a>
             </div>
-
-        </div>
-    @endforeach
+        @endforeach
         </div>
     </section>
 
